@@ -1,0 +1,9 @@
+target 'Sensors' do
+
+  use_frameworks!
+
+  # Pods for Sensors
+
+  
+
+end
