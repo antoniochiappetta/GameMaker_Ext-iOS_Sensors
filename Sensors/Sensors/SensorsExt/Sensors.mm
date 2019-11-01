@@ -109,21 +109,54 @@ CMMotionManager *motionManager;
 // MARK: - Proximity
 
 - (double)Sensors_Proximity_isAvailable {
-    // TODO: - Sensor Proximity isAvailable
-    return(0);
+    // Not all iOS devices have proximity sensors. To determine if proximity monitoring is available, attempt to enable it.
+    // If the value of the proximityMonitoringEnabled property remains NO, proximity monitoring is not available
+    // Once the check is done, reset the property to its original value
+    BOOL oldProximityValue = [UIDevice.currentDevice isProximityMonitoringEnabled];
+    [UIDevice.currentDevice setProximityMonitoringEnabled:!oldProximityValue];
+    BOOL newProximityValue = [UIDevice.currentDevice isProximityMonitoringEnabled];
+    [UIDevice.currentDevice setProximityMonitoringEnabled:oldProximityValue];
+    
+    if (oldProximityValue != newProximityValue) {
+        return(1);
+    } else {
+        return(0);
+    }
 }
 
 - (double)Sensors_Proximity_isActive {
-    // TODO: - Sensor Proximity isActive {
-    return(0);
+    if([UIDevice.currentDevice isProximityMonitoringEnabled]) {
+        return(1);
+    } else {
+        return(0);
+    }
 }
 
 - (void)Sensors_Proximity_Start:(double)interval {
-    // TODO: - Sensor Proximity start
+    UIDevice *device = [UIDevice currentDevice];
+    [device setProximityMonitoringEnabled:true];
+    if ([device isProximityMonitoringEnabled]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleProximityUpdates:) name:@"UIDeviceProximityStateDidChangeNotification" object:device];
+    }
 }
 
 - (void)Sensors_Proximity_Stop {
-    // TODO: - Sensor Proximity stop
+    UIDevice *device = [UIDevice currentDevice];
+    [device setProximityMonitoringEnabled:false];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UIDeviceProximityStateDidChangeNotification" object:device];
+}
+
+- (void) handleProximityUpdates:(NSNotification *)notification {
+    
+    UIDevice *device = [notification object];
+    BOOL proximityState = [device proximityState];
+    
+    int dsMapIndex = CreateDsMap(10,
+                                 "type",0,"Proximity",
+                                 "Value",proximityState, (void*)NULL
+                                 );
+                    
+    CreateAsynEventWithDSMap(dsMapIndex,EVENT_OTHER_SOCIAL);
 }
 
 

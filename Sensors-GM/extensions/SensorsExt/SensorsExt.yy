@@ -30,12 +30,25 @@
     "installdir": "",
     "iosProps": true,
     "iosSystemFrameworkEntries": [
-        
+        {
+            "id": "efdc8bb7-008b-4324-af22-e1847a7e146e",
+            "modelName": "GMExtensionFrameworkEntry",
+            "mvc": "1.0",
+            "frameworkName": "UIKit.framework",
+            "weakReference": false
+        },
+        {
+            "id": "a71a27a3-d201-4e51-a48f-fbfb6125e506",
+            "modelName": "GMExtensionFrameworkEntry",
+            "mvc": "1.0",
+            "frameworkName": "CoreMotion.framework",
+            "weakReference": false
+        }
     ],
     "iosThirdPartyFrameworkEntries": [
         
     ],
-    "iosdelegatename": "",
+    "iosdelegatename": "AppDelegate",
     "iosplistinject": "",
     "license": "",
     "maccompilerflags": "",
