@@ -43,13 +43,34 @@
             "mvc": "1.0",
             "frameworkName": "CoreMotion.framework",
             "weakReference": false
+        },
+        {
+            "id": "77d747fd-711e-4a25-b939-332e62bfaa8d",
+            "modelName": "GMExtensionFrameworkEntry",
+            "mvc": "1.0",
+            "frameworkName": "AVFoundation.framework",
+            "weakReference": false
+        },
+        {
+            "id": "108ddb1e-ce98-4492-8cc6-286acaf392a6",
+            "modelName": "GMExtensionFrameworkEntry",
+            "mvc": "1.0",
+            "frameworkName": "ImageIO.framework",
+            "weakReference": false
+        },
+        {
+            "id": "35626600-b849-4ddd-81b0-13b062201313",
+            "modelName": "GMExtensionFrameworkEntry",
+            "mvc": "1.0",
+            "frameworkName": " CoreMedia.framework",
+            "weakReference": false
         }
     ],
     "iosThirdPartyFrameworkEntries": [
         
     ],
     "iosdelegatename": "AppDelegate",
-    "iosplistinject": "",
+    "iosplistinject": "<key>Privacy - Camera Usage Description<\/key> \\u000a<string>Camera input is used to estimate ambient light<\/string>",
     "license": "",
     "maccompilerflags": "",
     "maclinkerflags": "",

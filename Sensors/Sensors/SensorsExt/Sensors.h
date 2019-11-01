@@ -16,8 +16,11 @@
 
 #import <UIKit/UIKit.h>
 #import<CoreMotion/CoreMotion.h>
+#import<AVFoundation/AVFoundation.h>
+#import<ImageIO/ImageIO.h>
+#import<CoreMedia/CoreMedia.h>
 
-@interface Sensors : NSObject
+@interface Sensors : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate>
 {
    
 }
@@ -38,14 +41,14 @@
 
 -(double)Sensors_Light_isAvailable;
 -(double)Sensors_Light_isActive;
--(void)Sensors_Light_Start:(double)interval;
+-(void)Sensors_Light_Start;
 -(void)Sensors_Light_Stop;
 
 // MARK: - Proximity
 
 -(double)Sensors_Proximity_isAvailable;
 -(double)Sensors_Proximity_isActive;
--(void)Sensors_Proximity_Start:(double)interval;
+-(void)Sensors_Proximity_Start;
 -(void)Sensors_Proximity_Stop;
 
 @end

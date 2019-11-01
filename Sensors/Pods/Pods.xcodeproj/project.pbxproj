@@ -19,11 +19,11 @@
 		43B7069AC6928CCA9C7686AFDA2F055D /* Pods-Sensors-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sensors-acknowledgements.plist"; sourceTree = "<group>"; };
 		7373C51FE01EC720A15540C82479E549 /* Pods-Sensors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sensors-umbrella.h"; sourceTree = "<group>"; };
 		97A6F8CEA4975EB53942899B68566E82 /* Pods-Sensors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sensors-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A9375312DC9EBFABBD50B66ADB1BC09B /* Pods-Sensors-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sensors-Info.plist"; sourceTree = "<group>"; };
 		B81D14C8F81A9C6557B4561295F3A70B /* Pods-Sensors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sensors.release.xcconfig"; sourceTree = "<group>"; };
 		D0CE103E30F1DE2DB0299A21D7594130 /* Pods-Sensors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sensors.debug.xcconfig"; sourceTree = "<group>"; };
-		E0661C90530290F9A4BD92ECDE69B356 /* Pods_Sensors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sensors.framework; path = "Pods-Sensors.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0661C90530290F9A4BD92ECDE69B356 /* Pods_Sensors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sensors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +143,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = E09222061567945AC78AB4778C61CB40 /* Products */;

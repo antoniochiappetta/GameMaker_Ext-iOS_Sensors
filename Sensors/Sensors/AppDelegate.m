@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Sensors.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // The following setup is needed to activate sensors on launch and debug their extracted values by printing them to Xcode console (only for debug purposes, comment out for production)
+    Sensors *sensors = [[Sensors alloc] init];
+    
+    // MARK: - Test Gyroscope sensor
+    if ([sensors Sensors_Gyroscope_isAvailable]) {
+        [sensors Sensors_Gyroscope_Start:1.0]; // Prints an update every second
+    }
+    
+    // MARK: - Test Light sensor
+    if ([sensors Sensors_Light_isAvailable]) {
+        [sensors Sensors_Light_Start]; // Prints an update every time the ambient light changes
+    }
+    
+    // MARK: - Test Proximity sensor
+    if ([sensors Sensors_Proximity_isAvailable]) {
+        [sensors Sensors_Proximity_Start]; // Prints an update every time the proximity changes from false to true or viceversa
+    }
+    
     return YES;
 }
 
